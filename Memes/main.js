@@ -12,17 +12,52 @@ fetch('https://api.imgflip.com/get_memes')
     images.forEach((el) => {
       el.src = `${memeURL}`;
     });
-    //   const firstmeme = document.createElement('img');
-    //   firstmeme.src = `${firstMemeURL}`;
-    //   document.body.appendChild(firstmeme);
-  });
 
-// document.onkeydown = function (e) {
-//   ++memeCount;
-//   // const currentMeme = memeObj.data.memes[memeCount].url;
-//   const image = document.querySelector('img');
-//   image.src = `${firstMemeURL}`;
-// };
+    document.body.style.backgroundColor = 'grey';
+    const paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach((el) => {
+      const reverseString = el.innerHTML.split('').reverse().join('');
+      el.innerHTML = `${reverseString}`;
+      el.style.color = 'yellow';
+    });
+
+    const links = document.querySelectorAll('a');
+    links.forEach((el) => {
+      // el.innerHTML = `<img src=assets/beerparrot.gif>`;
+      el.style.fontSize = '40px';
+      el.style.color = 'pink';
+    });
+
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((el) => {
+      el.placholder = 'asdfasdfsadf';
+    });
+
+    const hOne = document.querySelectorAll('h1');
+    hOne.forEach((el) => {
+      el.style.color = 'red';
+    });
+    const hTwo = document.querySelectorAll('h2');
+    hTwo.forEach((el) => {
+      el.style.color = 'green';
+    });
+    const hThree = document.querySelectorAll('h3');
+    hOne.forEach((el) => {
+      el.style.color = 'orange';
+    });
+
+    const spans = document.querySelectorAll('span');
+    spans.forEach((el) => {
+      el.style.color = 'blue';
+    });
+
+    // document.onkeydown = function (e) {
+    //   images.forEach((el) => {
+    //     memeCount = generateRandomNumber();
+    //     el.src = `${memeURL}`;
+    //   });
+    // };
+  });
 
 // const optionsObj = {
 //     method: 'POST',
